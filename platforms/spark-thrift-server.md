@@ -9,4 +9,10 @@
 java -jar squirrel-sql-4.2.0-standard.jar
 ```
 
-- 
+
+prerequisites
+
+``` shell
+pip install pyhive
+pip install thrift
+```
