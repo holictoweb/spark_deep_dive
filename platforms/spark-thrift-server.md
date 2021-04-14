@@ -20,24 +20,5 @@ sudo pip install pyhive
 ```
 
 
-- python code
-``` python
-from pyhive import hive
 
-host_name = "172.17.8.142"
-port = 10001  #default is 10000
-user = "hadoop"
-database="default"
-
-def hiveconnection(host_name, port, user, database):
-    conn = hive.Connection(host=host_name, port=port, username=user, database=database)
-    cur = conn.cursor()
-    cur.execute('select name  from demo2 return limit 2')
-    result = cur.fetchall()
-
-    return result
-
-# Call above function
-output = hiveconnection(host_name, port, user, database)
-print(output) 
-```
+[python code 부터 모든 내용 포함](https://sites.google.com/a/ku.th/big-data/pyhive)
