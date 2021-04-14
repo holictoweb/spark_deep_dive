@@ -5,8 +5,8 @@
 - squirrel 설치 [](http://www.squirrelsql.org/#installation)
 
 - 관리자 권한 cmd 
-''' shell 
+``` shell 
 java -jar squirrel-sql-4.2.0-standard.jar
-'''
+```
 
 - 
