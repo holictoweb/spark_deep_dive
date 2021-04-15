@@ -14,6 +14,7 @@ java -jar squirrel-sql-4.2.0-standard.jar
 sudo yum install java-1.8.0-openjdk
 sudo yum install cyrus-sasl-devel
 sudo pip install sasl thrift 
+sudo pip3 install thrift_sasl
 sudo pip install pyhive
 ```
 
@@ -22,8 +23,8 @@ prerequisites
 ``` shell
 
 sudo apt-get install libsasl2-dev
-
 sudo pip install  sasl thrift 
+sudo pip3 install thrift_sasl
 sudo pip install pyhive
 ```
 
