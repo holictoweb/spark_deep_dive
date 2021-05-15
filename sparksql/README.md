@@ -5,3 +5,5 @@
 
 3. create sparksql metadatabase
 
+
+4. test spark
