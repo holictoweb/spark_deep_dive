@@ -7,3 +7,10 @@
 
 
 4. test spark
+
+
+- check spark conf
+
+```
+
+```
