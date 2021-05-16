@@ -15,4 +15,4 @@
 
 # reference
 
-()[https://ichi.pro/ko/spark-sqlui-beokis-ting-mobeom-salye-257969224146259]
+[버켓팅 구동 방식](https://ichi.pro/ko/spark-sqlui-beokis-ting-mobeom-salye-257969224146259)
