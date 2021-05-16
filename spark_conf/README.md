@@ -8,7 +8,7 @@ https://spark.apache.org/docs/latest/configuration.html
 
 # config 설정 
 ### SparkConf를 통해 sparksession 생성 시 설정 
-```
+```python
 from pyspark.sql import SparkSession
 from pyspark.conf import SparkConf
 from pyspark.sql.types import *
