@@ -1,8 +1,48 @@
 ### spark conf
 
+https://spark.apache.org/docs/latest/configuration.html
+
 1. runtime
 2. shuffle
 
+
+# config 설정 
+### SparkConf를 통해 sparksession 생성 시 설정 
+```
+from pyspark.sql import SparkSession
+from pyspark.conf import SparkConf
+from pyspark.sql.types import *
+from pyspark.sql.functions import lit
+
+
+
+db_path = 'd:/dw/data-warehouse/stocklab_db'
+appName = "test_spark"
+master = "local[4]"
+
+
+conf = SparkConf().setAll([("spark.driver.maxResultSize", '6g'), ('spark.executor.cores', '1'), ('spark.submit.deployMode', 'cluster')])
+
+spark = SparkSession.builder.appName(appName) \
+  .master(master) \
+  .config(conf=conf) \
+  .config("spark.sql.warehouse.dir", db_path) \
+  .config("spark.jars.packages", "io.delta:delta-core_2.12:0.8.0") \
+  .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
+  .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog") \
+  .enableHiveSupport() \
+  .getOrCreate()
+
+from delta.tables import *
+from pyspark.sql.functions import *
+```
+
+- conf 확인
+```
+sc = spark.sparkContext
+
+sc.getConf().getAll()
+```
 
 
 

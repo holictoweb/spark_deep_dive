@@ -52,6 +52,22 @@ from delta.tables import *
 ```
 
 
+## bucketing
 
-- table upsert 확인
+- bucketing 은 기본적으로 내부 정보를 cluster id 기준으로 table 구성을 하는 것
+- 결국 db형태로 구성하는 것이기 때문에 saveAsTable 형태로 구성 ( 단순 parquet 파일 저장 형태는 지원하지 않음.)
+```
+(
+  df.write
+  .mode(saving_mode)  # append/overwrite
+  .bucketBy(n, field1, field2, ...)
+  .sortBy(field1, field2, ...)
+  .option("path", output_path)
+  .saveAsTable(table_name)
+)
+```
 
+- 위의 내용을 좀 더 명확히 확인 하기 위해서 sql 구문을 보는것이 도움이 됨.
+```
+
+```
