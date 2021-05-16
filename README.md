@@ -10,3 +10,9 @@
   - delta engine을 사용하는 방법
   - bucketing 을 통한 spark warehouse 
 
+
+
+
+# reference
+
+()[https://ichi.pro/ko/spark-sqlui-beokis-ting-mobeom-salye-257969224146259]
