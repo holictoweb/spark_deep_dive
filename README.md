@@ -1,21 +1,12 @@
-### spark 사용의 기초
+### spark deep dive
 
-1. create sparksession
-2. create spark dataframe schema
-
-3. create sparksql metadatabase
+1. spark_conf
+  - spark session 생성 시  config들에 대한 내용
 
 
-4. test spark
+2. spark_datawarehose
+  - spark datawarehouse를 구축 하기 위한 방법
+  - 기본적으로 parquet 기반
+  - delta engine을 사용하는 방법
+  - bucketing 을 통한 spark warehouse 
 
-```
-spark  = SparkSession.builder.enableHiveSupport().getOrCreate()
-
-    #.master("ip")
-
-#spark.conf.set("spark.executor.memory", '1g')
-#spark.conf.set('spark.executor.cores', '1')
-#spark.conf.set('spark.cores.max', '1')
-#spark.conf.set("spark.driver.memory",'1g')
-sc = spark.sparkContext
-```
